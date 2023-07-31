@@ -1,0 +1,17 @@
+<%- include("./partials/header.ejs") %>
+
+      <div class="container">
+<div class="date-div all-div item">
+  <%= actualDate %>
+</div>
+<% newToDo.forEach((newDiv)=>{ %>
+  <%- newDiv %>
+  <% }) %>
+  
+  <form class="form-list item" action="/submit" method="POST">
+    <input class= "text-list" type="text" name="newToDoList" placeholder="Create a new todo list" />
+    <input class="submit-list" type="submit" value="+" />
+  </form>
+      </div>
+
+      <%- include("./partials/footer.ejs") %>
